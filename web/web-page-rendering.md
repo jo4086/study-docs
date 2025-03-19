@@ -22,7 +22,7 @@
 
 ##
 
-## [1. 웹페이지 렌더링이란? (What is a Web Page Rendering)](#1-웹-페이지-렌더링이란)
+## [1. 웹 페이지 렌더링이란? (What is a Web Page Rendering)](#1-웹-페이지-렌더링이란)
 
 **정의**: 사용자의 브라우저에서 HTML, CSS, JS 등을 해석해 화면에 보여주는 과정
 
@@ -34,9 +34,11 @@
 -   검색 엔진 최적화 (SEO)
 -   개발 효율성 (코드 유지보수)
 
-## [2. 웹페이지의 렌더링 과정 (Web Page Rendering process)](#2-웹-페이지의-렌더링-과정)
+## [2. 웹 페이지의 렌더링 과정 (Web Page Rendering process)](#2-웹-페이지의-렌더링-과정)
 
 ### 전체 흐름도
+
+-   **`network` → `(HTML, CSS, js)수신` → `(DOM, CSSOM) 생성` → `Render Tree` → `Layout` → `Paintion`**
 
 ![](./md_image/2025-03-19-22-30-19.png)
 
@@ -44,7 +46,7 @@
 
 <details>
 
-<summary> 상세 설명 </summary>
+<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
 
 ![](./md_image/2025-03-19-22-37-21.png)
 **DOM**
@@ -62,7 +64,7 @@
 
 <details>
 
-<summary> 상세 설명 </summary>
+<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
 
 ![](./md_image/2025-03-19-22-39-19.png)
 
@@ -75,7 +77,7 @@
 
 <details>
 
-<summary> 상세 설명 </summary>
+<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
 
 ![](./md_image/2025-03-19-22-42-03.png)
 
@@ -87,7 +89,7 @@
 
 <details>
 
-<summary> 상세 설명 </summary>
+<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
 
 ![](./md_image/2025-03-19-22-42-56.png)
 
@@ -99,7 +101,7 @@
 
 <details>
 
-<summary> 상세 설명 </summary>
+<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
 
 ![](./md_image/2025-03-19-22-44-59.png)
 
