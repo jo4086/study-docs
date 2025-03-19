@@ -20,6 +20,8 @@
 
 ### 5. 정리
 
+##
+
 ## [1. 웹페이지 렌더링이란? (What is a Web Page Rendering)](#1-웹-페이지-렌더링이란)
 
 ## [2. 웹페이지의 렌더링 과정 (Web Page Rendering process)](#2-웹-페이지의-렌더링-과정)
