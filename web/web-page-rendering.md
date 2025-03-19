@@ -14,25 +14,37 @@
 
 ### 2. [웹 페이지의 렌더링 과정](#2-웹페이지의-렌더링-과정-web-page-rendering-process)
 
-### 3. React의 Rendering 프로세스
+### 3. [React의 렌더링 프로세스](#3-react의-렌더링-프로세스-react-render-process)
 
-### 4. 그 외의 다양한 렌더링 프로세스
+### 4. [그 외의 다양한 렌더링 프로세스]()
 
-### 5. 정리
+### 5. [정리]()
 
 ##
 
 ## [1. 웹페이지 렌더링이란? (What is a Web Page Rendering)](#1-웹-페이지-렌더링이란)
 
+**정의**: 사용자의 브라우저에서 HTML, CSS, JS 등을 해석해 화면에 보여주는 과정
+
+**목표**: 빠르게, 정확하게, 부드럽게 UI 출력
+
+**💡 관점**
+
+-   사용자 체감 속도 (퍼포먼스)
+-   검색 엔진 최적화 (SEO)
+-   개발 효율성 (코드 유지보수)
+
 ## [2. 웹페이지의 렌더링 과정 (Web Page Rendering process)](#2-웹-페이지의-렌더링-과정)
 
-전체 흐름도
+### 전체 흐름도
 
 ![](./md_image/2025-03-19-22-30-19.png)
 
+### 1. HTML, CSS를 통해 DOM(Document Object Model), CSSOM(CSS Object Model) 생성
+
 <details>
 
-<summary> $\textsf{\huge{{ 1. HTML, CSS를 통해 DOM(Document Object Model), CSSOM(CSS Object Model) 생성 }}}$ </summary>
+<summary> 상세 설명 </summary>
 
 ![](./md_image/2025-03-19-22-37-21.png)
 **DOM**
@@ -46,9 +58,11 @@
 
 </details>
 
+### 2. Render Tree 생성
+
 <details>
 
-<summary> $\textsf{\huge{{ 2. Render Tree 생성 }}}$ </summary>
+<summary> 상세 설명 </summary>
 
 ![](./md_image/2025-03-19-22-39-19.png)
 
@@ -57,9 +71,11 @@
 
 </details>
 
+### 3. Layout 생성
+
 <details>
 
-<summary> $\textsf{\huge{{ 3. Layout 생성 }}}$ </summary>
+<summary> 상세 설명 </summary>
 
 ![](./md_image/2025-03-19-22-42-03.png)
 
@@ -67,9 +83,11 @@
 
 </details>
 
+### 4. Painting 작업
+
 <details>
 
-<summary> $\textsf{\huge{{ 4. Painting 작업 }}}$ </summary>
+<summary> 상세 설명 </summary>
 
 ![](./md_image/2025-03-19-22-42-56.png)
 
@@ -77,9 +95,11 @@
 
 </details>
 
+### 5. javascript를 통한 DOM 업데이트
+
 <details>
 
-<summary> $\textsf{\huge{{ 5. javascript를 통한 DOM 업데이트 }}}$ </summary>
+<summary> 상세 설명 </summary>
 
 ![](./md_image/2025-03-19-22-44-59.png)
 
@@ -90,3 +110,5 @@
 -   여기서 React의 Single Page Application (SPA)이 획기적인 성능을 보여주게 되어 프론트의 대세가 됌
 
 </details>
+
+## [3. React의 렌더링 프로세스 (React render process)](#3-react의-렌더링-프로세스)
