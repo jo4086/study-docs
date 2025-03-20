@@ -38,11 +38,14 @@
 
 ### 전체 흐름도
 
--   **`network` → `(HTML, CSS, js)수신` → `(DOM, CSSOM) 생성` → `Render Tree` → `Layout` → `Paintion`**
+1.  `network`를 통해 `(HTML, CSS, js)수신` → [`(DOM, CSSOM)`](#1-html-css를-통해-dom-cssom-생성) 생성
+2.  [`Render Tree`](#2-render-tree-생성)
+3.  [`Layout`](#3-layout-생성)
+4.  [`Paintion`](#4-painting-작업)
 
 ![](./md_image/2025-03-19-22-30-19.png)
 
-### 1. HTML, CSS를 통해 DOM(Document Object Model), CSSOM(CSS Object Model) 생성
+### 1. HTML, CSS를 통해 DOM, CSSOM 생성
 
 > <details>
 >
@@ -113,3 +116,20 @@
 > </details>
 
 ## [3. React의 렌더링 프로세스 (React render process)](#3-react의-렌더링-프로세스)
+
+1. **렌더링을 유발하는 단계**
+
+    - `createRoot` 실행 or `state`의 업데이트
+
+2. **렌더링으로 컴포넌트를 호출하는 단계**
+
+    - **:one:** ( `createRoot`로 렌더링이 발생 ) → ( 루트 컴포넌트 호출 )
+    - **:two:** ( `state`의 업데이트로 렌더링 발생 ) → ( 해당 `state`가 속한 컴포넌트를 호출 )
+
+3. **커밋 단계**
+    - 실제 `DOM`에 적용하는 작업
+    - **３-１.** 첫번째 커밋인 경우:\
+      　　　- apeendChild를 사용하여 스크린에 있는 모든 노드 생성
+    - **３-２.** 첫번째 커밋이 아닌 경우:\
+      　　　- 최소한의 작업을 통해 변경사항만을 실제 DOM에 적용\
+      　　　- ⭐ 변경사항은 렌더링 중에 계산 :one:
