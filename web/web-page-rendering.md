@@ -44,73 +44,72 @@
 
 ### 1. HTML, CSS를 통해 DOM(Document Object Model), CSSOM(CSS Object Model) 생성
 
-<details>
-
-<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
-
-![](./md_image/2025-03-19-22-37-21.png)
-**DOM**
-
--   HTML을 브라우저가 해석하기 편하게 변환한 객체 트리
--   HTML로 작성한 요소들의 배치와 모양을 기술한 모든 정보 존재
-
-**CSSOM**
-
--   CSS로 작성해놓은 요소들의 스타일 관련된 모든 정보 존재
-
-</details>
+> <details>
+>
+> <summary> $\textsf{\color{magenta}{< 본문 >}}$ </summary>
+>
+> ![](./md_image/2025-03-19-22-37-21.png) > **DOM**
+>
+> -   HTML을 브라우저가 해석하기 편하게 변환한 객체 트리
+> -   HTML로 작성한 요소들의 배치와 모양을 기술한 모든 정보 존재
+>
+> **CSSOM**
+>
+> -   CSS로 작성해놓은 요소들의 스타일 관련된 모든 정보 존재
+>
+> </details>
 
 ### 2. Render Tree 생성
 
-<details>
-
-<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
-
-![](./md_image/2025-03-19-22-39-19.png)
-
--   **`DOM`** & **`CSSOM`** 을 합쳐서 렌더트리 생성
--   **웹페이지의 청사진** 이라고도 불림 (배치와 모양 스타일 모두 존재)
-
-</details>
+> <details>
+>
+> <summary> $\textsf{\color{magenta}{< 본문 >}}$ </summary>
+>
+> ![](./md_image/2025-03-19-22-39-19.png)
+>
+> -   **`DOM`** & **`CSSOM`** 을 합쳐서 렌더트리 생성
+> -   **웹페이지의 청사진** 이라고도 불림 (배치와 모양 스타일 모두 존재)
+>
+> </details>
 
 ### 3. Layout 생성
 
-<details>
-
-<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
-
-![](./md_image/2025-03-19-22-42-03.png)
-
--   **`Render Tree`** 기반으로 실제 웹 페이지에 요소들의 배치를 결정하는 작업
-
-</details>
+> <details>
+>
+> <summary> $\textsf{\color{magenta}{< 본문 >}}$ </summary>
+>
+> ![](./md_image/2025-03-19-22-42-03.png)
+>
+> -   **`Render Tree`** 기반으로 실제 웹 페이지에 요소들의 배치를 결정하는 작업
+>
+> </details>
 
 ### 4. Painting 작업
 
-<details>
-
-<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
-
-![](./md_image/2025-03-19-22-42-56.png)
-
--   실제로 요소들을 화면에 그려내는 과정
-
-</details>
+> <details>
+>
+> <summary> $\textsf{\color{magenta}{< 본문 >}}$ </summary>
+>
+> ![](./md_image/2025-03-19-22-42-56.png)
+>
+> -   실제로 요소들을 화면에 그려내는 과정
+>
+> </details>
 
 ### 5. javascript를 통한 DOM 업데이트
 
-<details>
-
-<summary> $\textsf{\color{magenta}{설명 보기}}$ </summary>
-
-![](./md_image/2025-03-19-22-44-59.png)
-
--   `javascript`를 통해 `DOM` 업데이트는 `Critical Rendering Path`를 다시 실행함
--   각각 `Reflow`, `Repaint`라는 특별한 이름을 지을 정도로 `Layout`과 `painting` 작업은 연산이 많이 필요한 시간이 걸림
--   그래서 페이지를 업데이트 할 때 DOM의 수정을 최소화 해야함
--   그러나 서비스의 규모가 커질수록 이는 힘든 일
--   여기서 React의 Single Page Application (SPA)이 획기적인 성능을 보여주게 되어 프론트의 대세가 됌
-
-</details>
+> <details>
+>
+> <summary> $\textsf{\color{magenta}{< 본문 >}}$ </summary>
+>
+> ![](./md_image/2025-03-19-22-44-59.png)
+>
+> -   `javascript`를 통해 `DOM` 업데이트는 `Critical Rendering Path`를 다시 실행함
+> -   각각 `Reflow`, `Repaint`라는 특별한 이름을 지을 정도로 `Layout`과 `painting` 작업은 연산이 많이 필요한 시간이 걸림
+> -   그래서 페이지를 업데이트 할 때 DOM의 수정을 최소화 해야함
+> -   그러나 서비스의 규모가 커질수록 이는 힘든 일
+> -   여기서 React의 Single Page Application (SPA)이 획기적인 성능을 보여주게 되어 프론트의 대세가 됌
+>
+> </details>
 
 ## [3. React의 렌더링 프로세스 (React render process)](#3-react의-렌더링-프로세스)
